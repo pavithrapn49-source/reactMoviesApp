@@ -65,7 +65,8 @@ Network issues
 
 📦 Installation
 1️⃣ Clone the repository
-git clone https://github.com/your-username/react-movie-app.git
+git clone https://github.com/pavithrapn49-source
+
 
 
 📁 Project Structure

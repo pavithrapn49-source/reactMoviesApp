@@ -1,9 +1,6 @@
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 const BASE = "https://www.omdbapi.com/";
 
-console.log(import.meta.env.VITE_OMDB_API_KEY);
-
-
 async function fetchFromOmdb(params) {
   const url = new URL(BASE);
   params.apikey = API_KEY;
@@ -33,3 +30,5 @@ export async function searchMovies({ query, type = "", page = 1 }) {
 export async function getMovieById(id) {
   return await fetchFromOmdb({ i: id, plot: "full" });
 }
+
+

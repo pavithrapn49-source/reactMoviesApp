@@ -1,6 +1,7 @@
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 const BASE = "https://www.omdbapi.com/";
 
+
 async function fetchFromOmdb(params) {
   const url = new URL(BASE);
   params.apikey = API_KEY;
@@ -13,6 +14,8 @@ async function fetchFromOmdb(params) {
   const data = await res.json();
   return data;
 }
+console.log("API KEY:", API_KEY);
+
 
 /**
  * Search movies using OMDb `s` param.

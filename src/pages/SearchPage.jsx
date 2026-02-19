@@ -83,9 +83,10 @@ React.useEffect(() => {
         gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
         gap: 16
       }}>
-        {movies.map(m => (
-          <MovieCard key={m.imdbID} movie={m} onFavChange={handleFavCount} />
-        ))}
+        {movies.map((movie, index) => (
+  <MovieCard key={movie.imdbID + index} movie={movie} />
+))}
+
       </div>
 
       <Pagination page={page} totalPages={totalPages} onChange={(p) => {
